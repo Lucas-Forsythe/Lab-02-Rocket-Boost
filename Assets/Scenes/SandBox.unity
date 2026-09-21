@@ -891,6 +891,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 3427859297721012720, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427859297721012720, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7325006142300728206, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
       propertyPath: mainEngineSound
       value: 
