@@ -22,12 +22,15 @@ MonoBehaviour:
   m_AdditionalPlatformBuildSettings: []
   m_OverrideGlobalSceneList: 1
   m_Scenes:
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/SandBox.unity
     m_guid: 7614f3b6878ff044ea1f8377f842c8dd
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/Level 2.unity
     m_guid: 563bc9cf03b589d4f8727dce5b884443
+  - m_enabled: 1
+    m_path: Assets/Scenes/StateFXPractice.unity
+    m_guid: 45c84820bc6f8644da2442595a444436
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
