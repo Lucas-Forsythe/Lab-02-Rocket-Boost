@@ -1,16 +1,27 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] InputAction thrust;
+    [SerializeField] private float thrustStrength = 1000f;
+
+    Rigidbody rb;
+
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+    }
+    private void OnEnable()
+    {
+        thrust.Enable();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if(thrust.IsPressed())
+        {
+            rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
+        }
     }
 }
