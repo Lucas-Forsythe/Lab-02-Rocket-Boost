@@ -8,7 +8,10 @@ public class Movement : MonoBehaviour
     [SerializeField] InputAction rotation;
     [SerializeField] private float thrustStrength = 1000f;
     [SerializeField] private float rotationStrength = 100f;
-    [SerializeField] AudioClip mainEngineSound;
+    [SerializeField] AudioClip mainEngineSFX;
+    [SerializeField] ParticleSystem mainengineFX;
+    [SerializeField] ParticleSystem leftengingeFX;
+    [SerializeField] ParticleSystem rightengineFX;
 
     Rigidbody rb;
     AudioSource audioSource;
@@ -34,16 +37,27 @@ public class Movement : MonoBehaviour
     {
         if (thrust.IsPressed())
         {
-            rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(mainEngineSound);
-            }
+            StartThrusting();
+        }
 
-            else
-            {
-                audioSource.Stop();
-            }
+        else
+        {
+            audioSource.Stop();
+            mainengineFX.Stop();
+        }
+
+    }
+
+    private void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngineSFX);
+        }
+        if (!mainengineFX.isPlaying)
+        {
+            mainengineFX.Play();
         }
     }
 
@@ -53,10 +67,25 @@ public class Movement : MonoBehaviour
         if(rotationInput < 0)
         {
             ApplyRotation(rotationStrength);
+            if (!leftengingeFX.isPlaying)
+            {
+                leftengingeFX.Play();
+                rightengineFX.Stop();
+            }
         }
         else if (rotationInput > 0)
         {
             ApplyRotation(-rotationStrength);
+            if (!rightengineFX.isPlaying)
+            {
+                rightengineFX.Play();
+                leftengingeFX.Stop();
+            }
+        }
+        else
+        {
+            leftengingeFX.Stop();
+            rightengineFX.Stop();
         }
     }
 

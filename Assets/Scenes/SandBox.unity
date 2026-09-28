@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 94bbcea2e7d4d9f42965a7e7bf05512e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -891,18 +891,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rocket
       objectReference: {fileID: 0}
-    - target: {fileID: 3427859297721012720, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3427859297721012720, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
-      propertyPath: m_LinearDamping
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7325006142300728206, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
-      propertyPath: mainEngineSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 5f6e392506e1c5f41883e9a7af0ce7e3, type: 3}
     - target: {fileID: 7396321569023434908, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25
@@ -942,18 +930,6 @@ PrefabInstance:
     - target: {fileID: 7396321569023434908, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8324612147834695400, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
-      propertyPath: failure
-      value: 
-      objectReference: {fileID: 8300000, guid: 29987b3ac5dab07478f4801fac08eb7d, type: 3}
-    - target: {fileID: 8324612147834695400, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
-      propertyPath: success
-      value: 
-      objectReference: {fileID: 8300000, guid: a5e6ee8d840a188439e0533ae822bfc8, type: 3}
-    - target: {fileID: 8404197371045051800, guid: 07f71ee13488afd4bb76d76abeb86e16, type: 3}
-      propertyPath: m_Resource
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
